@@ -8,8 +8,34 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-inter-mono);
+  --font-sans: var(--font-urbanist-sans);
+
+  --color-primary-lightest: #FAEAF2;
+  --color-primary-lighter: #F6D6E6;
+  --color-primary-light: #E270A8;
+  --color-primary: #D63384;
+  --color-primary-dark: #AB2869;
+  --color-primary-darker: #551434;
+  --color-primary-darkest: #400F27;
+
+  --text-large: 26px;
+  --text-large--line-height: calc(var(--text-large) * 1.5);
+  --text-medium: 20px;
+  --text-medium--line-height: calc(var(--text-medium) * 1.5);
+  --text-regular: 18px;
+  --text-regular--line-height: calc(var(--text-regular) * 1.5);
+  --text-small: 16px;
+  --text-small--line-height: calc(var(--text-small) * 1.5);
+  --text-tiny: 12px;
+  --text-tiny--line-height: calc(var(--text-tiny) * 1.5);
+
+  --font-weight-extrabold: 800;
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-mediumweight: 500;
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,3 +50,98 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Headings */
+/* Desktop styles */
+h1 {
+  font-size: 84px;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 60px;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+h4 {
+  font-size: 40px;
+  line-height: 1.3;
+}
+h5 {
+  font-size: 32px;
+  line-height: 1.3;
+}
+h6 {
+  font-size: 26px;
+  line-height: 1.4;
+}
+.tagline {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 44px;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  h6 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+/*
+.scheme-1 {
+  --color-text: #171717;              /* Neutral Darkest
+  --color-background: #fff;           /* White
+  --color-foreground: #fff;           /* White
+  --color-border: #d1d1d1;            /* Neutral Darkest 15% Opacity
+  --color-accent: #d63384;            /* Cerise
+}
+
+/* Color Scheme 2 (Darkest)
+.scheme-2 {
+  --color-text: #fff;                 /* White
+  --color-background: #171717;        /* Neutral Darkest
+  --color-foreground: #171717;        /* Neutral Darkest
+  --color-border: #ffffff33;          /* White 20% Opacity
+  --color-accent: #fff;               /* White
+}
+/* Color Scheme 3 (Dark)
+.scheme-3 {
+  --color-text: #fff;                 /* White
+  --color-background: #1D1C23;        /* Neutral Darkest
+  --color-foreground: #1D1C23;        /* Neutral Darkest
+  --color-border: #ffffff33;          /* White 20% Opacity
+  --color-accent: #fff;               /* White
+}
+/* Color Scheme 5 (Wine)
+.scheme-5 {
+  --color-text: #fff;                 /* White
+  --color-background: #551434;        /* Cerise Darker
+  --color-foreground: #551434;        /* Cerise Darker
+  --color-border: #ffffff33;          /* White 20% Opacity
+  --color-accent: #fff;               /* White
+}
+
+*/
