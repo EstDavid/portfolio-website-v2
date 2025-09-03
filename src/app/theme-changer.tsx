@@ -11,7 +11,7 @@ export default function ThemeChanger () {
     <div>
       <Button
         type="button"
-        variant='ghost'
+        variant='outline'
         onClick={() => {
           if (theme === 'dark') {
             setTheme('light');

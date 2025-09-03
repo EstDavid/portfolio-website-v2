@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Urbanist, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { Navbar } from "@/components/custom/navigation/navbar";
+import Footer from "@/components/custom/navigation/footer";
 
 const interMono = Inter({
   variable: "--font-inter-mono",
@@ -30,7 +32,9 @@ export default function RootLayout ({
         className={`${interMono.variable} ${urbanistSans.variable} h-full w-full overflow-y-auto overflow-x-hidden bg-background antialiased`}
       >
         <ThemeProvider attribute='class'>
+          <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

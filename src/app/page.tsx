@@ -8,7 +8,7 @@ export default function Home ({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="font-sans bg-background">
+    <div className="font-sans bg-background h-[3000px]">
       <main className="flex flex-col items-center sm:items-start">
         <Button>Test<LaptopMinimalCheck /></Button>
         <Button variant="secondary">Test<LaptopMinimalCheck /></Button>
