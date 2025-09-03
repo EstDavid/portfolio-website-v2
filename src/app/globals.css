@@ -132,42 +132,6 @@ h6 {
   }
 }
 
-/*
-.scheme-1 {
-  --color-text: #171717;              /* Neutral Darkest
-  --color-background: #fff;           /* White
-  --color-foreground: #fff;           /* White
-  --color-border: #d1d1d1;            /* Neutral Darkest 15% Opacity
-  --color-accent: #d63384;            /* Cerise
-}
-
-/* Color Scheme 2 (Darkest)
-.scheme-2 {
-  --color-text: #fff;                 /* White
-  --color-background: #171717;        /* Neutral Darkest
-  --color-foreground: #171717;        /* Neutral Darkest
-  --color-border: #ffffff33;          /* White 20% Opacity
-  --color-accent: #fff;               /* White
-}
-/* Color Scheme 3 (Dark)
-.scheme-3 {
-  --color-text: #fff;                 /* White
-  --color-background: #1D1C23;        /* Neutral Darkest
-  --color-foreground: #1D1C23;        /* Neutral Darkest
-  --color-border: #ffffff33;          /* White 20% Opacity
-  --color-accent: #fff;               /* White
-}
-/* Color Scheme 5 (Wine)
-.scheme-5 {
-  --color-text: #fff;                 /* White
-  --color-background: #551434;        /* Cerise Darker
-  --color-foreground: #551434;        /* Cerise Darker
-  --color-border: #ffffff33;          /* White 20% Opacity
-  --color-accent: #fff;               /* White
-}
-
-*/
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

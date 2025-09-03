@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Urbanist, Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 
 const interMono = Inter({
   variable: "--font-inter-mono",
@@ -23,13 +24,14 @@ export default function RootLayout ({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full w-full">
+    <html suppressHydrationWarning lang="en" className="h-full w-full">
+      <head />
       <body
-        className={`${interMono.variable} ${urbanistSans.variable} overflow-y-auto overflow-x-hidden antialiased`}
+        className={`${interMono.variable} ${urbanistSans.variable} h-full w-full overflow-y-auto overflow-x-hidden bg-background antialiased`}
       >
-        <main className="flex flex-col items-center sm:items-start">
+        <ThemeProvider attribute='class'>
           {children}
-        </main>
+        </ThemeProvider>
       </body>
     </html>
   );
