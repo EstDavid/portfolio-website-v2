@@ -42,6 +42,10 @@
   --height-navbar-height: 72px;
 
   --spacing-section-max-width: 1280px;
+  --spacing-global-padding-x-desktop: 64px;
+  --spacing-global-padding-x-mobile: 20px;
+  --spacing-global-padding-y-desktop: 112px;
+  --spacing-global-padding-y-mobile: 64px;
   
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
