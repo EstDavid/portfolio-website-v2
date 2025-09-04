@@ -6,8 +6,8 @@ import { footerLinks, footerCopyright } from "@/lib/data/footer";
 
 export default function Footer () {
   return (
-    <footer className="w-full bg-background border-t border-gray-200 mt-12">
-      <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col gap-8">
+    <footer className="w-full bg-background border-t border-gray-200 mt-12 px-global-padding-x-mobile lg:px-global-padding-x-desktop">
+      <div className="max-w-section-max-width mx-auto py-10 flex flex-col gap-8">
         {/* Top section: Logo/Name and Navigation */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           {/* Logo/Name */}

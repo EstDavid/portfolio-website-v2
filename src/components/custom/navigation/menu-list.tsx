@@ -12,17 +12,17 @@ export default function MenuList ({
       {menuItems.map(item => {
         return (
           <NavigationMenuItem key={item.title} >
-            <NavigationMenuLink asChild className="px-0 md:px-2 hover:bg-primary-light" >
-              <Link href={item.href} >
-                <p className="text-regular font-mediumweight text-primary-dark hover:text-primary-lightest">
-                  {item.title}
-                </p>
+            <NavigationMenuLink asChild className="px-0 md:px-2 hover:bg-transparent hover:text-primary" >
+              <Link href={item.href} className="text-primary dark:text-primary-light hover:bg-none hover:underline hover:underline-offset-8 hover:decoration-4" >
+                <span className="text-regular font-mediumweight">{item.title}</span>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         );
       })}
-      {children}
+      <div className="ml-4">
+        {children}
+      </div>
     </NavigationMenuList>
   );
 }
