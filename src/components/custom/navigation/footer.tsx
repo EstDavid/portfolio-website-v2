@@ -2,6 +2,7 @@ import { NavigationMenu } from "@/components/ui/navigation-menu";
 import LogoBadge from "./logo-badge";
 import MenuList from "./menu-list";
 import Link from "next/link";
+import { footerLinks, footerCopyright } from "@/lib/data/footer";
 
 export default function Footer () {
   return (
@@ -15,19 +16,20 @@ export default function Footer () {
             <LogoBadge />
             <MenuList />
           </NavigationMenu>
-
         </div>
         {/* Divider */}
         <hr className="border-gray-200" />
         {/* Bottom section: Policies and Copyright */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm">
           <div className="flex flex-wrap gap-6">
-            <Link href="#privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="#terms" className="hover:text-primary transition-colors">Terms of Use</Link>
-            <Link href="#cookies" className="hover:text-primary transition-colors">Cookie Preferences</Link>
+            {footerLinks.map(link => (
+              <Link key={link.href} href={link.href} className="hover:text-primary transition-colors">
+                {link.label}
+              </Link>
+            ))}
           </div>
           <div className="text-center md:text-right">
-            © 2025 David de Esteban. All rights reserved.
+            {footerCopyright}
           </div>
         </div>
       </div>
