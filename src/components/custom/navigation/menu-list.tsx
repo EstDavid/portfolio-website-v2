@@ -12,8 +12,12 @@ export default function MenuList ({
       {menuItems.map(item => {
         return (
           <NavigationMenuItem key={item.title} >
-            <NavigationMenuLink asChild className="px-0 md:px-2" >
-              <Link href={item.href} ><p className="text-regular font-mediumweight">{item.title}</p></Link>
+            <NavigationMenuLink asChild className="px-0 md:px-2 hover:bg-primary-light" >
+              <Link href={item.href} >
+                <p className="text-regular font-mediumweight text-primary-dark hover:text-primary-lightest">
+                  {item.title}
+                </p>
+              </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         );
