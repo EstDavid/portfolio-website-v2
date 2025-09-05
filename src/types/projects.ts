@@ -19,7 +19,9 @@ export enum Technologies {
   reactnative = 'React Native',
   nextjs = 'Next.js',
   figma = 'Figma',
+  sql = 'SQL',
   postgresql = 'PostgreSQL',
+  prisma = 'Prisma ORM',
   nodejs = 'Node.js',
   expressjs = 'Express.js',
   openai = 'OpenAI API',
@@ -35,5 +37,8 @@ export enum Technologies {
   graphql = 'GraphQL',
   jest = 'Jest',
   digitalocean = 'Digital Ocean',
-  cypress = 'Cypress'
+  cypress = 'Cypress',
+  socketio = 'Socket.IO',
+  clerk = 'Clerk',
+  tailwind = 'Tailwind CSS'
 }
