@@ -3,7 +3,7 @@ import Image from "next/image";
 import RichTextParagraph from "@/components/ui/rich-text-paragraph";
 import { cn } from "@/lib/utils";
 import ProjectDialog from "../dialogs/project-dialog";
-import { ProjectData } from "@/types/projects";
+import { ProjectData } from "@/types/sections-data";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Github } from "lucide-react";
@@ -60,7 +60,7 @@ export default function ProjectCard ({ project }: { project: ProjectData; }) {
   return (
     <div className="flex flex-col gap-4 w-full h-fit p-8 bg-background dark:border dark:border-primary dark:shadow-primary dark:shadow-md rounded-2xl shadow-lg">
       {/* Photo gallery */}
-      <h3 >{project.title}</h3>
+      <h3 className="text-primary-light">{project.title}</h3>
       <ProjectImage
         title={project.title}
         src={project.imageSrc}

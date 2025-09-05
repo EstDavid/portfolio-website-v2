@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react";
+
 export type ProjectData = {
   title: string;
   tagline: string;
@@ -42,3 +44,10 @@ export enum Technologies {
   clerk = 'Clerk',
   tailwind = 'Tailwind CSS'
 }
+
+export type ServiceData = {
+  icon: LucideIcon;
+  title: string;
+  tagline: string;
+  description: string;
+};
