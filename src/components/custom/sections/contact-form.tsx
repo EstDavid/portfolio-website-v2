@@ -111,7 +111,7 @@ export default function ContactForm ({ emailVariables }: {
   };
 
   return (
-    < div className="bg-white dark:bg-neutral/10 rounded-2xl p-8 shadow-lg" >
+    < div className="bg-white dark:bg-neutral/10 rounded-2xl p-8 shadow-lg transition-transform duration-200 hover:scale-110" >
       <form ref={form} onSubmit={handleSubmit} className="space-y-6">
         {/* Name Field */}
         <div>

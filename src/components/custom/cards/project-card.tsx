@@ -58,7 +58,7 @@ function ProjectImage ({ title, src, rounded, landscape, liveProjectUrl, githubP
 
 export default function ProjectCard ({ project }: { project: ProjectData; }) {
   return (
-    <div className="flex flex-col gap-4 w-full h-fit p-8 bg-background dark:border dark:border-primary dark:shadow-primary dark:shadow-md rounded-2xl shadow-lg">
+    <div className="flex flex-col gap-4 w-full h-fit p-8 bg-background dark:border dark:border-primary dark:shadow-primary dark:shadow-md rounded-2xl shadow-lg transition-transform duration-200 hover:scale-105">
       {/* Photo gallery */}
       <h3 className="text-primary-light">{project.title}</h3>
       <ProjectImage
