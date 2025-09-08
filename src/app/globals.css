@@ -40,6 +40,7 @@
   --font-weight-light: 300;
     
   --height-navbar-height: 72px;
+  --spacing-navbar-height: var(--height-navbar-height);
 
   --spacing-section-max-width: 1280px;
   --spacing-global-padding-x-desktop: 64px;

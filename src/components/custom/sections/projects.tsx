@@ -5,8 +5,8 @@ import { projects } from "@/lib/data/projects";
 
 export default function Projects () {
   return (
-    <SectionContainer>
-      <div id="projects" className="flex flex-col items-center gap-16">
+    <SectionContainer id="projects">
+      <div className="flex flex-col items-center gap-16">
         <div className="flex flex-col items-center gap-6">
           <h2>Projects</h2>
           <p>Explore my latest work</p>

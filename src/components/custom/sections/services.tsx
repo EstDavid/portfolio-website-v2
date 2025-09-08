@@ -1,12 +1,12 @@
 import React from "react";
 import SectionContainer from "@/components/custom/layout/section-container";
 import { servicesData } from "@/lib/data/services";
-import ServiceCard from "../cards/service-card";
+import ServiceCard from "@/components/custom/cards/service-card";
 
 export default function Services () {
   return (
-    <SectionContainer>
-      <div id="services" className="flex flex-col items-center gap-16">
+    <SectionContainer id="services">
+      <div className="flex flex-col items-center gap-16">
         <div className="flex flex-col items-center gap-6">
           <h2>Let's build together</h2>
           <p className="text-center max-w-[800px]">As a developer, I wear many hats, from crafting friendly and attractive user interfaces to building robust backend systems. My diverse skill set allows me to tackle projects from multiple angles.</p>
