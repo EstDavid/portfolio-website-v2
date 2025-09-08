@@ -27,7 +27,12 @@ export default function RootLayout ({
 }>) {
   return (
     <html suppressHydrationWarning lang="en" className="h-full w-full">
-      <head />
+      <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"></link>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"></link>
+        <link rel="manifest" href="/favicon/site.webmanifest"></link>
+      </head>
       <body
         className={`${interMono.variable} ${urbanistSans.variable} h-full w-full overflow-y-auto overflow-x-hidden bg-background antialiased`}
       >

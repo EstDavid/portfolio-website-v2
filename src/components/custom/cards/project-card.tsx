@@ -1,4 +1,6 @@
-import React from "react";
+'use client';
+
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import RichTextParagraph from "@/components/ui/rich-text-paragraph";
 import { cn } from "@/lib/utils";
@@ -17,13 +19,45 @@ function ProjectImage ({ title, src, rounded, landscape, liveProjectUrl, githubP
   liveProjectUrl?: string;
   githubProjectUrl?: string;
 }) {
+  const imageRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
+
+  useEffect(() => {
+    setIsTouch(
+      "ontouchstart" in window ||
+      (window.matchMedia && window.matchMedia("(pointer: coarse)").matches)
+    );
+  }, []);
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.1, rootMargin: '-48% 0px -48% 0px' }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className={cn("relative mb-4 w-full aspect-square", landscape ? 'aspect-16/9' : '')}>
+    <div
+      ref={imageRef}
+      className={cn("relative mb-4 w-full aspect-square", landscape ? 'aspect-16/9' : '')}
+    >
       {(liveProjectUrl || githubProjectUrl) &&
         <div className={
           cn(
-            "absolute w-full h-full opacity-0 hover:opacity-100 z-10 bg-primary/10 transition-opacity duration-200",
-            rounded ? 'rounded-lg' : ''
+            "absolute w-full h-full z-10 bg-primaryd/10",
+            rounded ? "rounded-lg" : "",
+            "opacity-0 hover:opacity-100 transition-opacity duration-200",
+            inView && isTouch ? "opacity-100" : ""
           )}>
           {liveProjectUrl ?
             <Button className="absolute bottom-10 left-1/2 -translate-x-1/2" asChild>

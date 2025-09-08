@@ -23,7 +23,7 @@ export const projects: ProjectData[] = [
 
   Available on [iOS App Store](https://apps.apple.com/gb/app/pop-in-home/id6476573924 "Pop In Home in iOs") and as [Web App](https://www.popinhome.com "Pop In Home App")
     `,
-    imageSrc: '/images/projects/popinhome_002.png',
+    imageSrc: '/images/projects/popinhome_003.png',
     imageRounded: true,
     liveProjectUrl: 'https://www.popinhome.com',
     technologies: [
