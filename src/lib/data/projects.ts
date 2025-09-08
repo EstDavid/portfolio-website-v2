@@ -1,4 +1,4 @@
-import { ProjectData, Technologies } from "@/types/sections-data";
+import { ProjectData, TechnologyName } from "@/types/sections-data";
 
 export const projects: ProjectData[] = [
   {
@@ -22,20 +22,20 @@ export const projects: ProjectData[] = [
     imageRounded: true,
     liveProjectUrl: 'https://www.popinhome.com',
     technologies: [
-      Technologies.typescript,
-      Technologies.react,
-      Technologies.git,
-      Technologies.github,
-      Technologies.githubcopilot,
-      Technologies.nextjs,
-      Technologies.tailwind,
-      Technologies.sql,
-      Technologies.expressjs,
-      Technologies.postgresql,
-      Technologies.figma,
-      Technologies.openai,
-      Technologies.agents,
-      Technologies.digitalocean,
+      TechnologyName.typescript,
+      TechnologyName.react,
+      TechnologyName.git,
+      TechnologyName.github,
+      TechnologyName.githubcopilot,
+      TechnologyName.nextjs,
+      TechnologyName.tailwind,
+      TechnologyName.sql,
+      TechnologyName.expressjs,
+      TechnologyName.postgresql,
+      TechnologyName.figma,
+      TechnologyName.openai,
+      TechnologyName.agents,
+      TechnologyName.digitalocean,
     ]
   },
   {
@@ -61,17 +61,17 @@ export const projects: ProjectData[] = [
     githubProjectUrl: 'https://github.com/estdavid/mbvc-payments',
     landscape: true,
     technologies: [
-      Technologies.typescript,
-      Technologies.react,
-      Technologies.git,
-      Technologies.github,
-      Technologies.githubcopilot,
-      Technologies.nextjs,
-      Technologies.tailwind,
-      Technologies.sql,
-      Technologies.postgresql,
-      Technologies.prisma,
-      Technologies.v0,
+      TechnologyName.typescript,
+      TechnologyName.react,
+      TechnologyName.git,
+      TechnologyName.github,
+      TechnologyName.githubcopilot,
+      TechnologyName.nextjs,
+      TechnologyName.tailwind,
+      TechnologyName.sql,
+      TechnologyName.postgresql,
+      TechnologyName.prisma,
+      TechnologyName.v0,
     ]
   },
   {
@@ -99,17 +99,17 @@ export const projects: ProjectData[] = [
     githubProjectUrl: 'https://github.com/EstDavid/pet-care-app',
     landscape: true,
     technologies: [
-      Technologies.typescript,
-      Technologies.react,
-      Technologies.git,
-      Technologies.github,
-      Technologies.githubcopilot,
-      Technologies.nextjs,
-      Technologies.tailwind,
-      Technologies.mongodb,
-      Technologies.socketio,
-      Technologies.clerk,
-      Technologies.figma,
+      TechnologyName.typescript,
+      TechnologyName.react,
+      TechnologyName.git,
+      TechnologyName.github,
+      TechnologyName.githubcopilot,
+      TechnologyName.nextjs,
+      TechnologyName.tailwind,
+      TechnologyName.mongodb,
+      TechnologyName.socketio,
+      TechnologyName.clerk,
+      TechnologyName.figma,
     ]
   },
   {
@@ -140,10 +140,10 @@ export const projects: ProjectData[] = [
     imageRounded: true,
     githubProjectUrl: 'https://github.com/EstDavid/pura-vida-app',
     technologies: [
-      Technologies.javascript,
-      Technologies.reactnative,
-      Technologies.github,
-      Technologies.figma,
+      TechnologyName.javascript,
+      TechnologyName.reactnative,
+      TechnologyName.github,
+      TechnologyName.figma,
     ]
   },
   {
@@ -180,13 +180,13 @@ export const projects: ProjectData[] = [
     githubProjectUrl: 'https://github.com/EstDavid/uniswapv3-charts',
     landscape: true,
     technologies: [
-      Technologies.typescript,
-      Technologies.solidity,
-      Technologies.ethersjs,
-      Technologies.react,
-      Technologies.github,
-      Technologies.expressjs,
-      Technologies.mongodb,
+      TechnologyName.typescript,
+      TechnologyName.solidity,
+      TechnologyName.ethersjs,
+      TechnologyName.react,
+      TechnologyName.github,
+      TechnologyName.expressjs,
+      TechnologyName.mongodb,
     ]
   },
   {
@@ -227,13 +227,13 @@ export const projects: ProjectData[] = [
     githubProjectUrl: 'https://github.com/EstDavid/delta-radar',
     landscape: true,
     technologies: [
-      Technologies.javascript,
-      Technologies.solidity,
-      Technologies.ethersjs,
-      Technologies.react,
-      Technologies.github,
-      Technologies.expressjs,
-      Technologies.mongodb,
+      TechnologyName.javascript,
+      TechnologyName.solidity,
+      TechnologyName.ethersjs,
+      TechnologyName.react,
+      TechnologyName.github,
+      TechnologyName.expressjs,
+      TechnologyName.mongodb,
     ]
   }
 ];

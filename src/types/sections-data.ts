@@ -10,10 +10,10 @@ export type ProjectData = {
   landscape?: boolean;
   liveProjectUrl?: string;
   githubProjectUrl?: string;
-  technologies: Technologies[];
+  technologies: TechnologyName[];
 };
 
-export enum Technologies {
+export enum TechnologyName {
   javascript = 'JavaScript',
   typescript = 'TypeScript',
   git = 'Git',
@@ -32,6 +32,7 @@ export enum Technologies {
   v0 = 'V0.dev',
   agents = 'Agents',
   solidity = 'Solidity',
+  ethereum = 'Ethereum',
   ethersjs = 'ethers.js',
   github = 'Github',
   mongodb = 'MongoDB',
@@ -44,10 +45,23 @@ export enum Technologies {
   clerk = 'Clerk',
   tailwind = 'Tailwind CSS'
 }
+export enum TechnologyCategory {
+  Frontend = 'Frontend',
+  Backend = 'Backend',
+  Blockchain = 'Blockchain',
+  AITools = 'AI tools'
+}
 
 export type ServiceData = {
   icon: LucideIcon;
   title: string;
   tagline: string;
   description: string;
+};
+
+export type TechnologyData = {
+  icon: string;
+  name: TechnologyName;
+  href: string;
+  categories: TechnologyCategory[];
 };
