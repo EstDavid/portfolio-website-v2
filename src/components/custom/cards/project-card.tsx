@@ -21,7 +21,14 @@ function ProjectImage ({ title, src, rounded, landscape, liveProjectUrl, githubP
 }) {
   const imageRef = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
 
+  useEffect(() => {
+    setIsTouch(
+      "ontouchstart" in window ||
+      (window.matchMedia && window.matchMedia("(pointer: coarse)").matches)
+    );
+  }, []);
   useEffect(() => {
     const observer = new window.IntersectionObserver(
       ([entry]) => setInView(entry.isIntersecting),
@@ -47,10 +54,10 @@ function ProjectImage ({ title, src, rounded, landscape, liveProjectUrl, githubP
       {(liveProjectUrl || githubProjectUrl) &&
         <div className={
           cn(
-            "absolute w-full h-full z-10 bg-primary/10",
+            "absolute w-full h-full z-10 bg-primaryd/10",
             rounded ? "rounded-lg" : "",
             "opacity-0 hover:opacity-100 transition-opacity duration-200",
-            inView ? "opacity-100" : ""
+            inView && isTouch ? "opacity-100" : ""
           )}>
           {liveProjectUrl ?
             <Button className="absolute bottom-10 left-1/2 -translate-x-1/2" asChild>
