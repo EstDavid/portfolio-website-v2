@@ -5,7 +5,7 @@ export default function LogoBadge () {
   return (
     <Button
       variant="secondary"
-      className="rounded-full border-none w-10 h-10 md:w-fit md:h-auto bg-primary text-white px-4 py-1 font-semibold text-lg shadow-none hover:bg-primary-dark focus:ring-0 focus:outline-none"
+      className="border-none w-10 h-10 md:w-fit md:h-auto text-3xl font-sans font-bold tracking-tight text-primary px-4 py-1 shadow-none focus:ring-0 focus:outline-none hover:bg-transparent dark:hover:bg-transparent dark:text-primary hover:tracking-wider"
       asChild
     >
       <Link href="/">
