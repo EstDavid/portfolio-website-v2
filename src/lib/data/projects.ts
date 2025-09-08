@@ -1,5 +1,10 @@
 import { ProjectData, TechnologyName } from "@/types/sections-data";
 
+export const projectsSectionText = {
+  title: 'Projects',
+  tagline: 'Explore my latest work'
+};
+
 export const projects: ProjectData[] = [
   {
     title: 'Pop In Home',

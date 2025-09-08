@@ -1,6 +1,11 @@
 import { ServiceData } from "@/types/sections-data";
 import { Atom, Link, Rocket, Settings, Sparkles, Wrench } from "lucide-react";
 
+export const servicesSectionText = {
+  title: "Let's build together",
+  tagline: "As a developer, I wear many hats, from crafting friendly and attractive user interfaces to building robust backend systems. My diverse skill set allows me to tackle projects from multiple angles."
+};
+
 export const servicesData: ServiceData[] = [
   {
     icon: Rocket,

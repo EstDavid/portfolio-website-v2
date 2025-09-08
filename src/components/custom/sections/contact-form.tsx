@@ -111,7 +111,7 @@ export default function ContactForm ({ emailVariables }: {
   };
 
   return (
-    < div className="bg-white dark:bg-neutral/10 rounded-2xl p-8 shadow-lg transition-transform duration-200 hover:scale-110" >
+    < div className="bg-white dark:bg-primary-light rounded-2xl p-8 shadow-lg transition-transform duration-200 hover:scale-110" >
       <form ref={form} onSubmit={handleSubmit} className="space-y-6">
         {/* Name Field */}
         <div>
@@ -144,7 +144,7 @@ export default function ContactForm ({ emailVariables }: {
             className={classNameInput}
           />
           {emailError && (
-            <p id="email-error" className="mt-1 text-tiny text-red-600">
+            <p id="email-error" className="mt-1 text-tiny text-red-600 dark:text-red-800">
               {emailError}
             </p>
           )}
