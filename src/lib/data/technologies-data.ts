@@ -2,6 +2,10 @@ import { TechnologyData, TechnologyName, TechnologyCategory } from "@/types/sect
 
 const imagesPath = '/images/technology-icons';
 
+export const technologiesSectionText = {
+  title: 'Tech Stack'
+};
+
 export const technologiesData: TechnologyData[] = [
   {
     icon: `${imagesPath}/typescript.svg`,
