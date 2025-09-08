@@ -1,3 +1,4 @@
+import Contact from "@/components/custom/sections/contact";
 import Hero from "@/components/custom/sections/hero";
 import Projects from "@/components/custom/sections/projects";
 import Services from "@/components/custom/sections/services";
@@ -11,6 +12,7 @@ export default function Home () {
         <Projects />
         <Services />
         <Technologies />
+        <Contact />
       </main>
     </div>
   );
