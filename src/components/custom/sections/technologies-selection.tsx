@@ -13,7 +13,7 @@ export default function TechnologiesSelection ({ technologies }: { technologies:
   return (
     <div className="flex flex-col gap-4 items-center">
       <div className="w-full flex justify-center">
-        <div className="bg-primary-lightest dark:bg-primary-darkest rounded-xl p-2 flex flex-col sm:flex-row gap-2">
+        <div className="bg-primary-lightest dark:bg-transparent dark:border dark:border-primary rounded-xl p-2 flex flex-col sm:flex-row gap-2">
           {filterOptions.map((option) => (
             <Button
               key={option}
