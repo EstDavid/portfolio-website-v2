@@ -12,10 +12,6 @@ export const menuItems: { title: string; href: string; }[] = [
     href: "/#technologies"
   },
   {
-    title: "About",
-    href: "/#about"
-  },
-  {
     title: "Contact",
     href: "/#contact"
   },
