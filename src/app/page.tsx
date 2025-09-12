@@ -10,8 +10,8 @@ export default function Home () {
       <main className="flex flex-col items-center">
         <Hero />
         <Projects />
-        <Services />
         <Technologies />
+        <Services />
         <Contact />
       </main>
     </div>
