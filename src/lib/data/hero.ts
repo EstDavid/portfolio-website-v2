@@ -4,13 +4,13 @@ export const heroData = {
     "I build scalable web applications using React, Next.js, and Node.js. From responsive frontends to robust backend APIs, I deliver complete solutions that solve real business problems.",
   buttons: [
     {
-      label: "Explore",
-      href: "/#explore",
+      label: "Contact",
+      href: "mailto:estdav@protonmail.com",
       variant: "default"
     },
     {
-      label: "Contact",
-      href: "/#contact",
+      label: "Projects",
+      href: "/#projects",
       variant: "outline"
     }
   ],
