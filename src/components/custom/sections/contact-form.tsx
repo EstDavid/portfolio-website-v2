@@ -11,9 +11,9 @@ import emailjs from "@emailjs/browser";
 import ContactDialog from "../dialogs/contact-dialog";
 
 const classNameLabel: HTMLAttributes<HTMLDivElement>['className'] =
-  "block text-sm font-medium text-neutral dark:text-white mb-2";
+  "block text-sm font-medium mb-2";
 const classNameInput: HTMLAttributes<HTMLDivElement>['className'] =
-  "w-full px-4 py-3 rounded-lg border border-neutral/20 dark:border-white/20 bg-neutral/5 dark:bg-neutral/20 text-neutral dark:text-white placeholder-neutral/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent";
+  "w-full px-4 py-3 rounded-lg border border-neutral/20 dark:border-white/20 bg-neutral/5 dark:bg-neutral/20 placeholder-neutral/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -111,7 +111,7 @@ export default function ContactForm ({ emailVariables }: {
   };
 
   return (
-    < div className="bg-white dark:bg-primary-light rounded-2xl p-8 shadow-lg transition-transform duration-200 hover:scale-110" >
+    < div className="bg-white dark:bg-primary rounded-2xl p-8 shadow-lg transition-transform duration-200 hover:scale-110" >
       <form ref={form} onSubmit={handleSubmit} className="space-y-6">
         {/* Name Field */}
         <div>

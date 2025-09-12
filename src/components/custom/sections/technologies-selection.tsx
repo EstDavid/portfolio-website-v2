@@ -13,7 +13,7 @@ export default function TechnologiesSelection ({ technologies }: { technologies:
   return (
     <div className="flex flex-col gap-4 items-center">
       <div className="w-full flex justify-center">
-        <div className="bg-primary-lightest dark:bg-transparent dark:border dark:border-primary rounded-xl p-2 flex flex-col sm:flex-row gap-2">
+        <div className="bg-foreground/70 dark:bg-transparent dark:border dark:border-primary rounded-xl p-2 flex flex-col sm:flex-row gap-2">
           {filterOptions.map((option) => (
             <Button
               key={option}
@@ -26,7 +26,7 @@ export default function TechnologiesSelection ({ technologies }: { technologies:
         </div>
       </div>
       <div className="w-fit">
-        <div className="grid grid-cols-4 lg:grid-cols-6 gap-4 bg-primary-lightest dark:bg-primary-darker rounded-lg p-4">
+        <div className="grid grid-cols-4 lg:grid-cols-6 gap-4 bg-foreground/20 rounded-lg p-4">
           {technologies
             .filter(technology => filter === 'All' || technology.categories.includes(filter as TechnologyCategory))
             .map((technology, index) => <TechnologyCard key={index} technology={technology} />)}

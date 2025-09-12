@@ -20,7 +20,7 @@ export default function Contact () {
   }
 
   return (
-    <SectionContainer id="contact" className="bg-primary/5 dark:bg-primary/10">
+    <SectionContainer id="contact" className="bg-primary/30 dark:bg-primary/20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
         {/* Left side - Contact Info */}
         <div className="space-y-8">
