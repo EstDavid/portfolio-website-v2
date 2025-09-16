@@ -76,7 +76,7 @@ const ImageGalleryDialog: React.FC<ImageGalleryDialogProps> = memo(
                 <Button
                   className='absolute bg-primary opacity-50 hover:opacity-100 left-5 z-10 rounded-full outline-none cursor-pointer p-0'
                   size='icon'
-                  onClick={(e: any) => {
+                  onClick={(e) => {
                     e.stopPropagation();
                     onPrev();
                   }}
@@ -95,7 +95,7 @@ const ImageGalleryDialog: React.FC<ImageGalleryDialogProps> = memo(
                 <Button
                   className='absolute right-5 z-10 bg-primary opacity-50 hover:opacity-100 rounded-full p-2 outline-none cursor-pointer'
                   size='icon'
-                  onClick={(e: any) => {
+                  onClick={(e) => {
                     e.stopPropagation();
                     onNext();
                   }}
