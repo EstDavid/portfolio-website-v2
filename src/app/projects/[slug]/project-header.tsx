@@ -48,7 +48,7 @@ export default function ProjectHeader ({ project }: { project: ProjectData; }) {
     if (!open && selectedImage !== null) {
       setOpen(true);
     }
-  }, [selectedImage]);
+  }, [selectedImage, open]);
 
   const { images } = project;
 
