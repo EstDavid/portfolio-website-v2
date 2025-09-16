@@ -38,8 +38,8 @@ export function Navbar () {
   return (
     <Fragment>
       <div className={cn(
-        "fixed w-full max-w-full h-navbar-height bg-background border-b border-gray-200 z-50 px-global-padding-x-mobile lg:px-global-padding-x-desktop",
-        hasShadow ? 'shadow-md' : '')}>
+        "fixed w-full max-w-full h-navbar-height bg-background border-b border-gray-200 dark:border-primary z-50 px-global-padding-x-mobile lg:px-global-padding-x-desktop",
+        hasShadow ? 'shadow-md dark:shadow-primary/30' : '')}>
         <NavigationMenu className="h-full !max-w-section-max-width mx-auto flex items-center justify-between px-8 md:px-0 py-4">
           <LogoBadge />
           <div className="hidden md:flex">

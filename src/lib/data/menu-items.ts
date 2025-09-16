@@ -4,12 +4,16 @@ export const menuItems: { title: string; href: string; }[] = [
     href: "/#projects"
   },
   {
-    title: "Services",
-    href: "/#services"
-  },
-  {
     title: "Technologies",
     href: "/#technologies"
+  },
+  {
+    title: "Skills",
+    href: "/#skills"
+  },
+  {
+    title: "About",
+    href: "/#about"
   },
   {
     title: "Contact",

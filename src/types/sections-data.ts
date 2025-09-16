@@ -5,7 +5,7 @@ export type ProjectData = {
   tagline: string;
   shortDescription: string;
   fullDescription: string;
-  imageSrc: string;
+  images: string[];
   imageRounded?: boolean;
   landscape?: boolean;
   liveProjectUrl?: string;
