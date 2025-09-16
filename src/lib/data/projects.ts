@@ -5,6 +5,8 @@ export const projectsSectionText = {
   tagline: 'Explore my latest work'
 };
 
+const pathImages = '/images/projects';
+
 export const projects: ProjectData[] = [
   {
     title: 'Pop In Home',
@@ -15,15 +17,21 @@ export const projects: ProjectData[] = [
   By putting property intelligence reports, renovation analysis, and price projections in one place, the platform saves users the legwork that once required multiple tools or consultants. The result is a faster, more confident home-buying process for both individual buyers and professional investors.
 
   **My contributions**
-  - Built the admin panel from scratch with Next.js and added full CRUD APIs in the Node.js backend
-  - Integrated Stripe for subscription billing
-  - Added AI chat dialogs in the admin to speed up property-data enrichment
-  - Wrote the backend test suite to guard core endpoints
+  - Built the **admin panel from scratch with Next.js** and added full CRUD API endpoints in the Node.js backend
+  - **Integrated Stripe** for subscription billing
+  - **Added AI chat dialogs** in the admin to speed up property-data enrichment
+  - Wrote the **backend test suite** to guard core endpoints
   - Created Zod-validated forms for each property report (architecture, interior design, rental, financial, legal, engineering)
 
-  Available on [iOS App Store](https://apps.apple.com/gb/app/pop-in-home/id6476573924 "Pop In Home in iOs") and as [Web App](https://www.popinhome.com "Pop In Home App")
+  Available on [iOS App Store](https://apps.apple.com/gb/app/pop-in-home/id6476573924 "Pop In Home in iOs")
     `,
-    imageSrc: '/images/projects/popinhome_003.png',
+    images: [
+      `${pathImages}/popinhome_003.png`,
+      `${pathImages}/popinhome_005.png`,
+      `${pathImages}/popinhome_004.png`,
+      `${pathImages}/popinhome_007.png`,
+      `${pathImages}/popinhome_006.png`,
+    ],
     imageRounded: true,
     liveProjectUrl: 'https://www.popinhome.com',
     technologies: [
@@ -50,17 +58,19 @@ export const projects: ProjectData[] = [
     fullDescription: `I built a Full-stack web application with a payment management system for Montgó Beach Volley Club in Jávea, Spain, where I serve as president. The system streamlines direct mobile payments for a multi-level beach volleyball training program serving both adults and children across different skill levels.
 
   **Key Achievements:**
-  - Built responsive, mobile-first interface using React/Next.js and Tailwind CSS
-  - Implemented secure payment gateway integration with Redsys for Spanish market compliance
+  - Built responsive, **mobile-first interface** using React/Next.js and Tailwind CSS
+  - Implemented **secure payment gateway** integration with **Redsys** for Spanish market compliance
   - Developed real-time payment status tracking and member management system
   - Architected full backend with Next.js API routes, Prisma ORM, and PostgreSQL database
-  - Reduced payment processing time and eliminated manual payment tracking
-
-  [See project live](https://payments.montgobvc.com "Montgó Beach Volley Club Bizum Payments Gateway")
-
-  [See MBVC Payments on Github](https://github.com/estdavid/mbvc-payments "MBVC Payments Project on Github")
+  - Reduced payment processing time and **eliminated manual payment tracking**
     `,
-    imageSrc: '/images/projects/mbvc-payments_004.jpeg',
+    images: [
+      `${pathImages}/mbvc-payments_004.jpg`,
+      `${pathImages}/mbvc-payments_007.jpg`,
+      `${pathImages}/mbvc-payments_005.jpg`,
+      `${pathImages}/mbvc-payments_006.jpg`,
+      `${pathImages}/mbvc-payments_009.png`,
+    ],
     imageRounded: true,
     liveProjectUrl: 'https://payments.montgobvc.com',
     githubProjectUrl: 'https://github.com/estdavid/mbvc-payments',
@@ -96,10 +106,14 @@ export const projects: ProjectData[] = [
   - **Component Development:** Built multiple reusable React components using Next.js App Router and TypeScript
   - **UI/UX Implementation:** Centralized styling system with Tailwind CSS and shadcn/ui components for consistent design
   - **Team Leadership:** Provided technical mentorship and debugging support to resolve complex development challenges
-
-  [See CADO on Github](https://github.com/EstDavid/pet-care-app "CADO Project on Github")
     `,
-    imageSrc: '/images/projects/cado_004.jpeg',
+    images: [
+      `${pathImages}/cado_004.jpg`,
+      `${pathImages}/cado_005.png`,
+      `${pathImages}/cado_006.png`,
+      `${pathImages}/cado_007.png`,
+      `${pathImages}/cado_008.png`,
+    ],
     imageRounded: true,
     githubProjectUrl: 'https://github.com/EstDavid/pet-care-app',
     landscape: true,
@@ -138,10 +152,12 @@ export const projects: ProjectData[] = [
   - **Performance Optimized:** Efficient local data management for smooth offline experience
   
   Perfect for festival-goers seeking a digital tool to enhance their spiritual journey while maintaining connection even in areas with limited network coverage.
-  
-  [See Pura Vida on Github](https://github.com/EstDavid/pura-vida-app "Pura Vida Project on Github")
-    `,
-    imageSrc: '/images/projects/puravida_001.jpeg',
+      `,
+    images: [
+      `${pathImages}/puravida_001.jpg`,
+      `${pathImages}/puravida_002.jpg`,
+      `${pathImages}/puravida_003.jpg`,
+    ],
     imageRounded: true,
     githubProjectUrl: 'https://github.com/EstDavid/pura-vida-app',
     technologies: [
@@ -178,10 +194,10 @@ export const projects: ProjectData[] = [
   - Responsive design with SCSS styling and interactive UX patterns
 
   This project showcases my understanding of DeFi protocols, complex data pipeline architecture, and the ability to build production-ready financial tools - valuable skills for Web3 startups and fintech companies
-  
-  [See UniCharts on Github](https://github.com/EstDavid/uniswapv3-charts "UniCharts Project on Github")
-    `,
-    imageSrc: '/images/projects/unicharts_001.png',
+      `,
+    images: [
+      `${pathImages}/unicharts_001.png`,
+    ],
     githubProjectUrl: 'https://github.com/EstDavid/uniswapv3-charts',
     landscape: true,
     technologies: [
@@ -225,10 +241,10 @@ export const projects: ProjectData[] = [
 
   Real-World DeFi Learnings
   Documented the economic realities of DeFi arbitrage, including transaction reversion rates, gas fee optimization, and competitive dynamics in high-frequency trading environments. Project showcases deep understanding of blockchain economics and DeFi protocol interactions  
-  
-  [See Delta Radar on Github](https://github.com/EstDavid/delta-radar "Delta Radar Project on Github")
-    `,
-    imageSrc: '/images/projects/deltaradar_001.png',
+      `,
+    images: [
+      `${pathImages}/deltaradar_001.png`,
+    ],
     githubProjectUrl: 'https://github.com/EstDavid/delta-radar',
     landscape: true,
     technologies: [

@@ -5,7 +5,7 @@ import ServiceCard from "@/components/custom/cards/service-card";
 
 export default function Services () {
   return (
-    <SectionContainer id="services">
+    <SectionContainer id="skills">
       <div className="flex flex-col items-center gap-16">
         <div className="flex flex-col items-center gap-6">
           <h2>{servicesSectionText.title}</h2>
