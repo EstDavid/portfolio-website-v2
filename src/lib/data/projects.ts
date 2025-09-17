@@ -2,7 +2,10 @@ import { ProjectData, TechnologyName } from "@/types/sections-data";
 
 export const projectsSectionText = {
   title: 'Projects',
-  tagline: 'Explore my latest work'
+  tagline: 'Explore my latest work',
+  backToHomepage: 'Back to homepage',
+  previousProject: 'Previous project',
+  nextProject: 'Next project'
 };
 
 const pathImages = '/images/projects';
