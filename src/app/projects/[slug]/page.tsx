@@ -1,5 +1,5 @@
 import SectionContainer from "@/components/custom/layout/section-container";
-import { projects } from "@/lib/data/projects";
+import { projects, projectsSectionText } from "@/lib/data/projects";
 import { getSlug } from "@/lib/server-utils";
 import ProjectHeader from "./project-header";
 import Link from "next/link";
@@ -30,23 +30,23 @@ export default async function Page ({ params }: PageProps) {
   return (
     <div>
       <SectionContainer className="!pt-1 sm:!pt-5 lg:!py-0">
-        <div className="flex flex-col sm:flex-row items-left sm:justify-between py-4 gap-2">
-          <Link href={`/#${slug}`} className="flex items-center gap-2 hover:text-primary">
-            <ArrowLeft className="ml-4" size={24} /><p>Back to homepage</p>
+        <div className="grid grid-cols-1 grid-rows-2 sm:grid-cols-3 sm:grid-rows-1 py-4 gap-2">
+          <Link href={`/#${slug}`} className="col-start-1 flex items-center gap-2 hover:text-primary">
+            <ArrowLeft size={24} /><p>{projectsSectionText.backToHomepage}</p>
           </Link>
-          <div className={cn("flex gap-5 w-full", projectIndex === 0 ? "justify-end" : "justify-between")}>
+          <div className={cn("flex col-start-1 sm:col-start-2 col-span-1 sm:col-span-2 row-start-2 sm:row-start-1", projectIndex === 0 ? "justify-end" : "justify-between")}>
             {previousProjectSlug && (
               <Link
                 href={`/projects/${previousProjectSlug}`}
                 className="flex items-center gap-2 hover:text-primary">
-                <ChevronsLeft size={24} /><p>Previous Project</p>
+                <ChevronsLeft size={24} /><p>{projectsSectionText.previousProject}</p>
               </Link>)
             }
             {nexProjectSlug && (
               <Link
                 href={`/projects/${nexProjectSlug}`}
                 className="flex items-center gap-2 hover:text-primary">
-                <p>Next Project</p><ChevronsRight size={24} />
+                <p>{projectsSectionText.nextProject}</p><ChevronsRight size={24} />
               </Link>
             )}
           </div>
