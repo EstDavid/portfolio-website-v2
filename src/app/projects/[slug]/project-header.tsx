@@ -48,6 +48,9 @@ export default function ProjectHeader ({ project }: { project: ProjectData; }) {
     if (!open && selectedImage !== null) {
       setOpen(true);
     }
+    if (open && selectedImage === null) {
+      setOpen(false);
+    }
   }, [selectedImage, open]);
 
   const { images } = project;
@@ -73,7 +76,9 @@ export default function ProjectHeader ({ project }: { project: ProjectData; }) {
         isOpen={open}
         images={images.map((image, index) => ({ src: image, alt: `Image ${index}` }))}
         selectedImageIndex={selectedImage ?? 0}
-        onClose={() => setOpen(false)}
+        onClose={() => {
+          setSelectedImage(null);
+        }}
         onNext={() => {
           selectNextPrev('next');
         }}
