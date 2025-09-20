@@ -30,10 +30,10 @@ export const projects: ProjectData[] = [
     `,
     images: [
       `${pathImages}/popinhome_003.png`,
+      `${pathImages}/popinhome_009.png`,
       `${pathImages}/popinhome_005.png`,
+      `${pathImages}/popinhome_010.png`,
       `${pathImages}/popinhome_004.png`,
-      `${pathImages}/popinhome_007.png`,
-      `${pathImages}/popinhome_006.png`,
     ],
     imageRounded: true,
     liveProjectUrl: 'https://www.popinhome.com',
@@ -69,7 +69,7 @@ export const projects: ProjectData[] = [
     `,
     images: [
       `${pathImages}/mbvc-payments_004.jpg`,
-      `${pathImages}/mbvc-payments_007.jpg`,
+      `${pathImages}/mbvc-payments_010.png`,
       `${pathImages}/mbvc-payments_005.jpg`,
       `${pathImages}/mbvc-payments_006.jpg`,
       `${pathImages}/mbvc-payments_009.png`,
