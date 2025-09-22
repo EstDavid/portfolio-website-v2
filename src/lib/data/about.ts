@@ -9,7 +9,7 @@ export const aboutData = {
 
   After more than 15 years as **Mechanical Engineer in the rolling stock industry** (trains, locomotives...), I bring a global perspective and analytical capacity to complex projects.
 
-  This are some of the things I have done so far:
+  These are some of the things I have done so far:
   - **Implemented from scratch an admin panel** for a real estate application
   - Introduced a **complete test suite and implemented TDD** to expand the backend in a more robust, reliable and agile way
   - **Integrated Stripe** in a web app, expanding monetization from only iOs users to a much wider audience
