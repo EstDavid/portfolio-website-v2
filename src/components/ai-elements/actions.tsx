@@ -35,7 +35,7 @@ export const Action = ({
   const button = (
     <Button
       className={cn(
-        "relative size-9 p-1.5 text-muted-foreground hover:text-foreground",
+        "relative size-9 p-1.5 text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-50",
         className
       )}
       size={size}
