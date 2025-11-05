@@ -1,3 +1,4 @@
+import FloatingChat from "@/components/custom/chat/floating-chat";
 import About from "@/components/custom/sections/about";
 import Contact from "@/components/custom/sections/contact";
 import Hero from "@/components/custom/sections/hero";
@@ -15,6 +16,7 @@ export default function Home () {
         <Services />
         <About />
         <Contact />
+        <FloatingChat />
       </main>
     </div>
   );
