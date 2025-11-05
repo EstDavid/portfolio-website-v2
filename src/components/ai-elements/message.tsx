@@ -6,13 +6,13 @@ import {
 import { cn } from "@/lib/utils";
 import type { UIMessage } from "ai";
 import { cva, type VariantProps } from "class-variance-authority";
-import type { ComponentProps, HTMLAttributes } from "react";
+import type { ComponentProps, HTMLAttributes, JSX } from "react";
 
 export type MessageProps = HTMLAttributes<HTMLDivElement> & {
   from: UIMessage["role"];
 };
 
-export const Message = ({ className, from, ...props }: MessageProps) => (
+export const Message = ({ className, from, ...props }: MessageProps): JSX.Element => (
   <div
     className={cn(
       "group flex w-full items-end justify-end gap-2 py-4",
@@ -30,12 +30,12 @@ const messageContentVariants = cva(
       variant: {
         contained: [
           "max-w-[80%] px-4 py-3",
-          "group-[.is-user]:bg-primary group-[.is-user]:text-primary-foreground",
-          "group-[.is-assistant]:bg-secondary group-[.is-assistant]:text-foreground",
+          "group-[.is-user]:bg-slate-900 group-[.is-user]:text-slate-50 dark:group-[.is-user]:bg-slate-50 dark:group-[.is-user]:text-slate-900",
+          "group-[.is-assistant]:bg-slate-100 group-[.is-assistant]:text-slate-950 dark:group-[.is-assistant]:bg-slate-800 dark:group-[.is-assistant]:text-slate-50",
         ],
         flat: [
-          "group-[.is-user]:max-w-[80%] group-[.is-user]:bg-secondary group-[.is-user]:px-4 group-[.is-user]:py-3 group-[.is-user]:text-foreground",
-          "group-[.is-assistant]:text-foreground",
+          "group-[.is-user]:max-w-[80%] group-[.is-user]:bg-slate-100 group-[.is-user]:px-4 group-[.is-user]:py-3 group-[.is-user]:text-slate-950 dark:group-[.is-user]:bg-slate-800 dark:group-[.is-user]:text-slate-50",
+          "group-[.is-assistant]:text-slate-950 dark:group-[.is-assistant]:text-slate-50",
         ],
       },
     },
@@ -53,7 +53,7 @@ export const MessageContent = ({
   className,
   variant,
   ...props
-}: MessageContentProps) => (
+}: MessageContentProps): JSX.Element => (
   <div
     className={cn(messageContentVariants({ variant, className }))}
     {...props}
@@ -65,16 +65,18 @@ export const MessageContent = ({
 export type MessageAvatarProps = ComponentProps<typeof Avatar> & {
   src: string;
   name?: string;
+  classNameImage?: string;
 };
 
 export const MessageAvatar = ({
   src,
   name,
+  classNameImage,
   className,
   ...props
-}: MessageAvatarProps) => (
-  <Avatar className={cn("size-8 ring-1 ring-border", className)} {...props}>
-    <AvatarImage alt="" className="mt-0 mb-0" src={src} />
+}: MessageAvatarProps): JSX.Element => (
+  <Avatar className={cn("size-8 ring-1 ring-slate-200 dark:ring-slate-800", className)} {...props}>
+    <AvatarImage alt="" className={cn("mt-0 mb-0", classNameImage)} src={src} />
     <AvatarFallback>{name?.slice(0, 2) || "ME"}</AvatarFallback>
   </Avatar>
 );
