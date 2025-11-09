@@ -6,6 +6,8 @@ import Projects from "@/components/custom/sections/projects";
 import Services from "@/components/custom/sections/services";
 import Technologies from "@/components/custom/sections/technologies";
 
+const aiChatFeatureFlag = process.env.AI_FEATURE_FLAG === 'TRUE';
+
 export default function Home () {
   return (
     <div className="font-sans bg-background">
@@ -16,7 +18,7 @@ export default function Home () {
         <Services />
         <About />
         <Contact />
-        <FloatingChat />
+        {aiChatFeatureFlag && <FloatingChat />}
       </main>
     </div>
   );
