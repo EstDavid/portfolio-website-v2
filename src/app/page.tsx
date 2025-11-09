@@ -1,9 +1,12 @@
+import FloatingChat from "@/components/custom/chat/floating-chat";
 import About from "@/components/custom/sections/about";
 import Contact from "@/components/custom/sections/contact";
 import Hero from "@/components/custom/sections/hero";
 import Projects from "@/components/custom/sections/projects";
 import Services from "@/components/custom/sections/services";
 import Technologies from "@/components/custom/sections/technologies";
+
+const aiChatFeatureFlag = process.env.AI_FEATURE_FLAG === 'TRUE';
 
 export default function Home () {
   return (
@@ -15,6 +18,7 @@ export default function Home () {
         <Services />
         <About />
         <Contact />
+        {aiChatFeatureFlag && <FloatingChat />}
       </main>
     </div>
   );
