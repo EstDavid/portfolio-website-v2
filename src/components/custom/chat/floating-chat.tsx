@@ -1,11 +1,72 @@
 'use client';
 
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { MessageCircle, SquarePen, WandSparkles, } from "lucide-react";
+import { JSX, ReactNode, useCallback, useState } from "react";
+import ChatAreaContainer from "../ai/chat-area-container";
+import { useChat } from '@ai-sdk/react';
+import { DefaultChatTransport } from "ai";
+import { PromptInputProvider } from "@/components/ai-elements/prompt-input";
 import { Button } from "@/components/ui/button";
-import { MessageCircle, X } from "lucide-react";
-import { JSX, useState } from "react";
+
+export interface ChatContent {
+  chatTitle: string;
+  startConversationPrompt: string;
+  copyMessage: string;
+  delete: string;
+  clearAttachments: string;
+  icon: ReactNode;
+}
 
 export default function FloatingChat (): JSX.Element {
+  const title = "David's clone";
+  const placeholder = 'Ask me something...';
+  const apiEndpoint = '/api/chat';
   const [isOpen, setIsOpen] = useState(false);
+
+  // TODO: Implement texts
+  const chatContent: ChatContent = {
+    chatTitle: "What would you like to know about me?",
+    startConversationPrompt: "You can questions about my experience, skills or background. Also, you can ask some of the typical behavioral questions. (Disclaimer: Some answers might be inaccurate)",
+    copyMessage: "copyMessage",
+    delete: "delete",
+    clearAttachments: "clearAttachments",
+    icon: <WandSparkles />
+  };
+
+  const prompts: string[] = [
+    'When did you start coding?',
+    'What was your first project as developer?',
+    'How many blockchain projects have you done?',
+    'What is your stack?',
+  ];
+
+  // Initialize chat
+  const { messages, sendMessage, stop, setMessages, status } = useChat({
+    transport: new DefaultChatTransport({
+      api: apiEndpoint,
+    }),
+  });
+
+  const deleteMessage = useCallback(
+    (index: number) => {
+      setMessages((prev) => prev.filter((_, i) => i !== index));
+    },
+    [setMessages]
+  );
+
+  const handleSuggestion = useCallback(
+    (suggestion: string) => {
+      sendMessage({
+        role: 'user',
+        parts: [{
+          type: 'text',
+          text: suggestion
+        }]
+      });
+    },
+    [setMessages]);
+
   return (
     <>
       {!isOpen && (
@@ -26,61 +87,47 @@ export default function FloatingChat (): JSX.Element {
         </button>
       )}
 
-      {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-          <div className="relative w-full max-w-6xl h-[90vh] bg-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-slate-700">
-            {/* Header */}
-            <div className="flex items-center justify-between px-6 py-4 bg-slate-900 border-b border-slate-700">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                  <MessageCircle className="h-5 w-5 text-slate-900" />
-                </div>
-                <div>
-                  <h2 className="text-lg font-semibold text-white">Chat with David's Clone</h2>
-                  <p className="text-sm text-slate-400">Ask me anything about David</p>
-                </div>
-              </div>
-              <Button
-                onClick={() => setIsOpen(false)}
-                variant="ghost"
-                size="icon"
-                className="text-slate-400 hover:text-white hover:bg-slate-800"
-              >
-                <X className="h-5 w-5" />
-              </Button>
-            </div>
-
-            {/* Chat Content Area - Placeholder for now */}
-            <div className="flex-1 overflow-y-auto p-6">
-              <div className="flex h-full items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#3dd9c5]/10 mx-auto">
-                    <MessageCircle className="h-10 w-10 text-[#3dd9c5]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Start a Conversation</h3>
-                    <p className="text-slate-400 max-w-md">
-                      This is where the chat interface will be. You can add your chat functionality here.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Input Area - Placeholder */}
-            <div className="border-t border-slate-700 bg-slate-900 px-6 py-4">
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <DialogContent className='max-h-[90vh] h-[90vh] w-full max-w-4xl gap-0 flex flex-col rounded-lg shadow-xl p-0 overflow-hidden'>
+          <PromptInputProvider>
+            <DialogDescription className='sr-only'>{title}</DialogDescription>
+            <DialogHeader className='flex-shrink-0 flex items-start p-4 pr-12 space-y-2 sm:space-y-0'>
+              <DialogTitle className='sr-only text-xl w-full sm:w-auto text-center font-bold self-start text-brand'>
+                {title}
+              </DialogTitle>
+              {messages.length > 0 &&
+                <Button
+                  type="button"
+                  variant='ghost'
+                  className="w-auto h-auto"
+                  title="Start a new chat"
+                  onClick={async () => {
+                    if (status === 'streaming' || status === 'submitted') {
+                      await stop();
+                    }
+                    setMessages([]);
+                  }}
+                >
+                  <SquarePen className="size-8" strokeWidth={2} />
+                </Button>
+              }
               <div className="flex gap-2">
-                <input
-                  type="text"
-                  placeholder="Type your message..."
-                  className="flex-1 rounded-lg bg-slate-800 border border-slate-700 px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#3dd9c5] focus:border-transparent"
-                />
-                <Button className="bg-primary text-slate-900 hover:bg-primary-dark font-medium px-6">Send</Button>
               </div>
-            </div>
-          </div>
-        </div>
-      )}
+            </DialogHeader>
+            <ChatAreaContainer
+              messages={messages}
+              status={status}
+              onSendMessage={sendMessage}
+              onStop={stop}
+              chatContent={chatContent}
+              prompts={prompts}
+              onDeleteMessage={deleteMessage}
+              handleSuggestionClick={handleSuggestion}
+              placeholder={placeholder}
+            />
+          </PromptInputProvider>
+        </DialogContent>
+      </Dialog>
     </>
   );
 } 
