@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import type { UIMessage } from "ai";
 import { cva, type VariantProps } from "class-variance-authority";
 import type { ComponentProps, HTMLAttributes, JSX } from "react";
+import { DynamicIcon, iconNames } from 'lucide-react/dynamic';
 
 export type MessageProps = HTMLAttributes<HTMLDivElement> & {
   from: UIMessage["role"];
@@ -62,21 +63,35 @@ export const MessageContent = ({
   </div>
 );
 
+type IconName = (typeof iconNames)[number];
+
+const isValidIconName = (name: string): name is IconName => {
+  return iconNames.includes(name as IconName);
+};
+
 export type MessageAvatarProps = ComponentProps<typeof Avatar> & {
-  src: string;
+  src: string | undefined;
   name?: string;
+  iconName?: string;
   classNameImage?: string;
 };
 
 export const MessageAvatar = ({
   src,
   name,
+  iconName,
   classNameImage,
   className,
   ...props
 }: MessageAvatarProps): JSX.Element => (
   <Avatar className={cn("size-8 ring-1 ring-slate-200 dark:ring-slate-800", className)} {...props}>
     <AvatarImage alt="" className={cn("mt-0 mb-0", classNameImage)} src={src} />
-    <AvatarFallback>{name?.slice(0, 2) || "ME"}</AvatarFallback>
+    <AvatarFallback>{
+      name?.slice(0, 2) ||
+      (iconName &&
+        isValidIconName(iconName) &&
+        <DynamicIcon name={iconName} className={classNameImage} />) ||
+      'You'
+    }</AvatarFallback>
   </Avatar>
 );
