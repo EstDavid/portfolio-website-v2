@@ -65,7 +65,7 @@ export default function FloatingChat (): JSX.Element {
         }]
       });
     },
-    [setMessages]);
+    [sendMessage]);
 
   return (
     <>

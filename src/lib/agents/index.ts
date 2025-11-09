@@ -66,8 +66,6 @@ export async function handleBackgroundQuery (messages: UIMessage[]): Promise<Res
         }
       }),
     },
-    onError: (event) => {
-    },
     stopWhen: stepCountIs(5), // Enable multi-step calls: tools will be executed and results processed by LLM
     system: `
     You are an assistant in a portfolio website of a software engineer.

@@ -1,7 +1,4 @@
-import { pgTable, varchar, text, timestamp, index, foreignKey, vector } from "drizzle-orm/pg-core"
-import { sql } from "drizzle-orm"
-
-
+import { pgTable, varchar, text, timestamp, index, foreignKey, vector } from "drizzle-orm/pg-core";
 
 export const resources = pgTable("resources", {
 	id: varchar({ length: 191 }).primaryKey().notNull(),
@@ -20,8 +17,8 @@ export const embeddings = pgTable("embeddings", {
 }, (table) => [
 	index("embeddingIndex").using("hnsw", table.embedding.asc().nullsLast().op("vector_cosine_ops")),
 	foreignKey({
-			columns: [table.resourceId],
-			foreignColumns: [resources.id],
-			name: "embeddings_resource_id_resources_id_fk"
-		}).onDelete("cascade"),
+		columns: [table.resourceId],
+		foreignColumns: [resources.id],
+		name: "embeddings_resource_id_resources_id_fk"
+	}).onDelete("cascade"),
 ]);

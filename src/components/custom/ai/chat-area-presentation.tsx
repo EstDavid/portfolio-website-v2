@@ -12,12 +12,11 @@ import {
   PromptInputFooter,
   PromptInputSubmit,
   PromptInputTextarea,
-  usePromptInputController,
   type PromptInputMessage,
 } from "@/components/ai-elements/prompt-input";
 import { cn } from "@/lib/utils";
 import type { ChatStatus, UIMessage } from "ai";
-import { Check, Copy, SquareIcon, X } from "lucide-react";
+import { Check, Copy, X } from "lucide-react";
 import { JSX, useRef } from "react";
 import { Message, MessageAvatar, MessageContent } from "@/components/ai-elements/message";
 import { Action, Actions } from "@/components/ai-elements/actions";
@@ -123,7 +122,6 @@ export function ChatAreaPresentation ({
   inputClassName = "bg-brand-50",
 }: ChatAreaPresentationProps): JSX.Element {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const controller = usePromptInputController();
 
   const handleSubmit = (message: PromptInputMessage): void => {
     if (!message.text?.trim() || disabled || isProcessing) return;
