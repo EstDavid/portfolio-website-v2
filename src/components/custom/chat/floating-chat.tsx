@@ -27,7 +27,7 @@ export default function FloatingChat (): JSX.Element {
   // TODO: Implement texts
   const chatContent: ChatContent = {
     chatTitle: "What would you like to know about me?",
-    startConversationPrompt: "You can questions about my experience, skills or background. Also, you can ask some of the typical behavioral questions. (Disclaimer: Some answers might be inaccurate)",
+    startConversationPrompt: "You can ask about my experience, background, hard skills, soft skills... try me! (Disclaimer: Some answers might be inaccurate)",
     copyMessage: "copyMessage",
     delete: "delete",
     clearAttachments: "clearAttachments",
@@ -36,9 +36,10 @@ export default function FloatingChat (): JSX.Element {
 
   const prompts: string[] = [
     'When did you start coding?',
-    'What was your first project as developer?',
-    'How many blockchain projects have you done?',
+    'What is your latest project?',
+    'What project are you most proud of?',
     'What is your stack?',
+    'How do you work with AI?'
   ];
 
   // Initialize chat
