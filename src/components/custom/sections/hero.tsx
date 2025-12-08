@@ -30,7 +30,9 @@ const Hero: React.FC = () => {
             <Image
               src={heroData.image.src}
               alt={heroData.image.alt}
+              priority
               fill
+              sizes="(max-width: 768px) 300px, (max-width: 1024px) 400px, 450px"
               className="object-contain rounded-full"
             />
           </div>

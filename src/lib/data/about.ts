@@ -5,18 +5,15 @@ export const aboutData = {
     alt: "David de Esteban about section"
   },
   description: `
-  I'm a **Full Stack Software Engineer** with experience in the development of complete solutions in the JavaScript and TypeScript ecosystem (React, Node.js, Next.js, MongoDB and PostgreSQL).
+Hey there! I'm an **AI-powered Full-stack Software Engineer** who loves building web apps from start to finish with **React/Next.js, Node.js, and TypeScript**. Before diving into software, I spent over **15 years as a Mechanical Engineer** in the railway industry — working on trains, locomotives, and large-scale technical projects. It taught me how to think in systems, stay calm under pressure, and turn complex ideas into real, working solutions.
 
-  After more than 15 years as **Mechanical Engineer in the rolling stock industry** (trains, locomotives...), I bring a global perspective and analytical capacity to complex projects.
+Here are a few things I've done so far:  
+- **Built an admin panel** from scratch for a real-estate platform, making content and data management much easier.  
+- **Set up backend tests and introduced TDD**, helping the codebase grow in a cleaner, more reliable way.  
+- **Integrated Stripe payments**, expanding monetization beyond iOS and reaching a wider audience.  
+- **Connected AI agents via OpenAI**, automating real-estate report generation and cutting delivery times.  
+- **Encouraged the switch to Next.js**, bringing in better practices and more scalable patterns.  
+- **Led engineering and consulting projects**, coordinating teams, clients, and technical solutions with a focus on efficiency and business impact.
 
-  These are some of the things I have done so far:
-  - **Implemented from scratch an admin panel** for a real estate application
-  - Introduced a **complete test suite and implemented TDD** to expand the backend in a more robust, reliable and agile way
-  - **Integrated Stripe** in a web app, expanding monetization from only iOs users to a much wider audience
-  - Connected **AI agents** via the **OpenAI API** to automate real estate report generation and reduce delivery times
-  - Promoted and **lead the adoption of Next.js** in the organization, establishing good practices and code patterns, and boosting the scalability of the app
-  - **Lead consulting projects as Mechanical Engineer**, coordinating teams, conducting commercial and technical negotiations with clients, and making improvements in efficiency and performance
-
-  What sets me apart: I possess a strong sense of **curiosity and capacity to learn** and adapt to different business needs. I combine my **systems thinking approach from Mechanical Engineering** with the tools and methods of modern Software Development **to join business intelligence with technical excellence**.
-  `
+What really drives me is **curiosity** and the excitement of **learning new things**. I like bringing together the **structured thinking** of engineering with the **creativity and speed** of modern web development to build products that are both **solid** and **meaningful**.`
 };

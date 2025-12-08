@@ -149,7 +149,7 @@ export function ChatAreaPresentation ({
               <ConversationEmptyState
                 title={chatContent.chatTitle}
                 description={chatContent.startConversationPrompt}
-                icon={chatContent.icon}
+                Icon={chatContent.icon}
               />
               <Suggestions className="w-full flex flex-wrap">
                 {prompts.map((prompt, i) => (

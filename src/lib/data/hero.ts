@@ -1,7 +1,7 @@
 export const heroData = {
   title: "Transforming Ideas Into High-Performance Applications",
   description:
-    "I build scalable web applications using React, Next.js, and Node.js. From responsive frontends to robust backend APIs, I deliver complete solutions that solve real business problems.",
+    "I build scalable web applications end-to-end with React, Next.js and Node.js, from responsive frontends to reliable backend APIs. I focus on admin tools, integrations (payments, AI, third-party APIs) and developer-friendly architectures that solve real business problems and are easy to evolve.",
   buttons: [
     {
       label: "Contact",
