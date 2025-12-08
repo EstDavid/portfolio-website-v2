@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowDownIcon } from "lucide-react";
+import { ArrowDownIcon, LucideIcon } from "lucide-react";
 import type { ComponentProps, JSX } from "react";
 import { useCallback } from "react";
 import { StickToBottom, useStickToBottomContext } from "use-stick-to-bottom";
@@ -33,14 +33,14 @@ export const ConversationContent = ({
 export type ConversationEmptyStateProps = ComponentProps<"div"> & {
   title?: string;
   description?: string;
-  icon?: React.ReactNode;
+  Icon?: LucideIcon;
 };
 
 export const ConversationEmptyState = ({
   className,
   title = "No messages yet",
   description = "Start a conversation to see messages here",
-  icon,
+  Icon: Icon,
   children,
   ...props
 }: ConversationEmptyStateProps): JSX.Element => (
@@ -53,7 +53,7 @@ export const ConversationEmptyState = ({
   >
     {children ?? (
       <>
-        {icon && <div className="text-slate-500 dark:text-slate-400">{icon}</div>}
+        {Icon && <div className="text-slate-500 dark:text-slate-400"><Icon /></div>}
         <div className="space-y-1">
           <h3 className="font-medium text-sm">{title}</h3>
           {description && (
