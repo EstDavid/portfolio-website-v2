@@ -21,6 +21,7 @@ export default function About () {
               src={aboutData.image.src}
               alt={aboutData.image.alt}
               fill
+              sizes="(max-width: 768px) 300px, (max-width: 1024px) 400px, 450px"
               className="object-cover rounded-full"
             />
           </div>
